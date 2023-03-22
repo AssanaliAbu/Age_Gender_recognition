@@ -3,4 +3,4 @@
 To run the demo:
 
 1. download models from the 'models' folder
-2. run python demo.py
+2. run demo.py
