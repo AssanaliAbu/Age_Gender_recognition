@@ -4,6 +4,11 @@ import numpy as np
 import cv2
 import os
 from sklearn.model_selection import train_test_split
+import dlib
+import tensorflow as tf
+
+
+cnn_face_detector = dlib.cnn_face_detection_model_v1("mmod_human_face_detector.dat")
 
 # Loading the data
 meta = pd.read_csv('meta.csv')
@@ -63,6 +68,17 @@ counter = 0
 
 for image in D_train.values:
     img = cv2.imread(image[1], 1)
+    faces_cnn = cnn_face_detector(img, 1)
+    if len(faces_cnn) == 1:
+        offset_x , offset_y  = max(faces_cnn[0].rect.left(),0),max(faces_cnn[0].rect.top(),0)
+        target_width, target_height = faces_cnn[0].rect.right() - offset_x, faces_cnn[0].rect.bottom() - offset_y
+
+        target_width = min(target_width, img.shape[1]-offset_x)
+        target_height = min(target_height, img.shape[0]-offset_y)
+
+        face_img = tf.image.crop_to_bounding_box(img, offset_y, offset_x, target_height,target_width)
+        img = face_img
+        img = img.numpy()
     img = cv2.resize(img, (128,128))
     if image[0] == 'male':
         cv2.imwrite('dataset/gender/train/male/' + str(counter) + '.jpg', img)
@@ -75,6 +91,17 @@ counter = 0
 
 for image in D_test.values:
     img = cv2.imread(image[1], 1)
+    faces_cnn = cnn_face_detector(img, 1)
+    if len(faces_cnn) == 1:
+        offset_x , offset_y  = max(faces_cnn[0].rect.left(),0),max(faces_cnn[0].rect.top(),0)
+        target_width, target_height = faces_cnn[0].rect.right() - offset_x, faces_cnn[0].rect.bottom() - offset_y
+
+        target_width = min(target_width, img.shape[1]-offset_x)
+        target_height = min(target_height, img.shape[0]-offset_y)
+
+        face_img = tf.image.crop_to_bounding_box(img, offset_y, offset_x, target_height,target_width)
+        img = face_img
+        img = img.numpy()
     img = cv2.resize(img, (128,128))
     if image[0] == 'male':
         cv2.imwrite('dataset/gender/test/male/' + str(counter) + '.jpg', img)
