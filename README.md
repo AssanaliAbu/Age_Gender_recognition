@@ -12,6 +12,13 @@ To run the demo:
 ![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/demo.gif)
 
 
+
+
+# Preprocessing:
 Dataset images were needed to be cropped down to face before training stage 
 
 ![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/crop_github.png)
+
+Also need to balance the dataset:
+![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/gender_dist_github.png)
+![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/age_dist_github.png)
