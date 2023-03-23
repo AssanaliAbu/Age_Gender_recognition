@@ -14,4 +14,4 @@ To run the demo:
 
 Dataset images were needed to be cropped down to face before training stage 
 
-![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/crop_github.png
+![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/crop_github.png)
