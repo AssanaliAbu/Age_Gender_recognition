@@ -1,5 +1,5 @@
 # Using ResNet-50 for age and gender recognition.
-# Trained on IMDB-WIKI dataset (500k+)
+# Trained on IMDB-WIKI dataset (500k+ images)
 
 **Utils** folder contains preprocessing files: Dataset balancing, Face detection, Face cropping.
 
