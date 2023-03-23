@@ -5,7 +5,7 @@
 
 To run the demo:
 
-1. download model(s) from the link: https://drive.google.com/drive/folders/1_uEWVO26XJ1D_ey2Ilt269xT9hkIr9BL?usp=sharing
+1. download models folder from the link: https://drive.google.com/drive/folders/1_uEWVO26XJ1D_ey2Ilt269xT9hkIr9BL?usp=sharing
 2. download utils folder (haar-cascade) 
 3. run demo.py
 
