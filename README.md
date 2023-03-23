@@ -32,5 +32,5 @@ Dataset images were needed to be cropped down to face before training stage
 
 # Training
 
-** Used pre-trained ResNet50 CNN model for both age and gender recognition. 
+**Used pre-trained ResNet50 CNN model for both age and gender recognition.**
 ![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/images/resnet50-git.png)
