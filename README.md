@@ -10,3 +10,8 @@ To run the demo:
 3. run demo.py
 
 ![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/demo.gif)
+
+
+Images were needed to be cropped down to face before training stage 
+
+![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/crop_gihub.png
