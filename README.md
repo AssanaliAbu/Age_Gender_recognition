@@ -8,4 +8,4 @@ To run the demo:
 1. download models from the 'models' folder
 2. run demo.py
 
-![](https://github.com/AssanaliAbu/Age_Gender_recognition/demo.gif)
+![](https://github.com/AssanaliAbu/Age_Gender_recognition/blob/main/demo.gif)
